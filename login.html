@@ -12,7 +12,7 @@
             <h1>WELCOME</h1>
             <P>JOIN US!</P>
             <div class="img-box">
-                <img src="./imgs/wuwu.jpeg" alt="">
+                <img id="avatar" src="./imgs/wuwu.jpeg" alt="">
             </div>
         </div>
         <div class="register-form">
@@ -36,6 +36,10 @@
             <div class="input-box">
                 <input type="text" placeholder="用户名">
                 <input type="text" placeholder="密码">
+                <div class="input-image">
+                    <input type="text" placeholder="验证码">
+                    <img src="./imgs/code.jpg" alt="验证码">
+                </div>
             </div>
             <div class="btn-box">
                 <button>登录</button>
@@ -49,11 +53,11 @@
             if (flag==true){
                 $(".pre-box").css("transform","translateX(100%)");
                 $(".pre-box").css("background-color","#accae1");
-                $("img").attr("src","./imgs/waoku.jpg");
+                $("#avatar").attr("src","./imgs/waoku.jpg");
             }else{
                 $(".pre-box").css("transform","translateX(0%)");
                 $(".pre-box").css("background-color","#e2c3d3");
-                $("img").attr("src","./imgs/wuwu.jpeg");
+                $("#avatar").attr("src","./imgs/wuwu.jpeg");
             }
             flag=!flag;
         }
